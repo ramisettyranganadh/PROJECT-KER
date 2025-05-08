@@ -2093,7 +2093,6 @@ static void nvme_free_host_mem(struct nvme_dev *dev)
 	dev->nr_host_mem_descs = 0;
 }
 
-#if 0
 static int nvme_alloc_host_mem_single(struct nvme_dev *dev, u64 size)
 {
 	dev->hmb_sgt = dma_alloc_noncontiguous(dev->dev, size,
@@ -2180,11 +2179,9 @@ out:
 	dev->host_mem_descs = NULL;
 	return -ENOMEM;
 }
-#endif
 
 static int nvme_alloc_host_mem(struct nvme_dev *dev, u64 min, u64 preferred)
 {
-#if 0
 	unsigned long dma_merge_boundary = dma_get_merge_boundary(dev->dev);
 	u64 min_chunk = min_t(u64, preferred, PAGE_SIZE * MAX_ORDER_NR_PAGES);
 	u64 hmminds = max_t(u32, dev->ctrl.hmminds * 4096, PAGE_SIZE * 2);
@@ -2207,7 +2204,6 @@ static int nvme_alloc_host_mem(struct nvme_dev *dev, u64 min, u64 preferred)
 			nvme_free_host_mem(dev);
 		}
 	}
-#endif
 
 	return -ENOMEM;
 }
