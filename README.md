@@ -1,3 +1,10 @@
+Step 1 - Latest Linux
+git clone https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/
+Step 2 - 
+export ARCH=arm; export LLVM=1; make defconfig;
+Step 3 -
+make menuconfig;
+
 Linux kernel
 ============
 
@@ -28,3 +35,4 @@ Build status for rpi-6.6.y:
 Build status for rpi-6.12.y:
 [![Pi kernel build tests](https://github.com/raspberrypi/linux/actions/workflows/kernel-build.yml/badge.svg?branch=rpi-6.12.y)](https://github.com/raspberrypi/linux/actions/workflows/kernel-build.yml)
 [![dtoverlaycheck](https://github.com/raspberrypi/linux/actions/workflows/dtoverlaycheck.yml/badge.svg?branch=rpi-6.12.y)](https://github.com/raspberrypi/linux/actions/workflows/dtoverlaycheck.yml)
+
