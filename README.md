@@ -1,8 +1,13 @@
-Step 1 - Latest Linux
+#Step 1 - Latest Linux
+
 git clone https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/
-Step 2 - 
+
+#Step 2 - 
+
 export ARCH=arm; export LLVM=1; make defconfig;
-Step 3 -
+
+#Step 3 -
+
 make menuconfig;
 
 Linux kernel
