@@ -9,8 +9,10 @@ export ARCH=arm; export LLVM=1;
 
 #Step 3 -
 
-make defconfig;
-make menuconfig;
+sudo make defconfig;
+sudo make menuconfig;
+sudo make savedefconfig; 
+vi defconfig;
 
 Linux kernel
 ============
