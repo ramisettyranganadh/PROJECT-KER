@@ -4,10 +4,12 @@ git clone https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/
 
 #Step 2 - 
 
-export ARCH=arm; export LLVM=1; make defconfig;
+sudo apt-get install libncurses-dev flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf;
+export ARCH=arm; export LLVM=1; 
 
 #Step 3 -
 
+make defconfig;
 make menuconfig;
 
 Linux kernel
